@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Kılıç Hair Studio | Modern Erkek Kuaförü</title>
+  <meta name="description" content="Kılıç Hair Studio erkek kuaförü modern saç kesimi sakal tasarımı bakım ve stil hizmetleri Her gün 09:00 22:00 açık Google Maps üzerinden yol tarifi alın" />
+  <meta name="theme-color" content="#101010" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet">
+  <style>
+    :root{
+      --bg:#0b0b0a;
+      --panel:#12120f;
+      --panel2:#181713;
+      --cream:#f3ead7;
+      --muted:#b9ad95;
+      --gold:#c8a35b;
+      --gold2:#f0cf85;
+      --line:rgba(243,234,215,.13);
+      --glass:rgba(255,255,255,.055);
+      --shadow:0 28px 80px rgba(0,0,0,.52);
+      --radius:28px;
+    }
+    *{box-sizing:border-box;margin:0;padding:0}
+    html{scroll-behavior:smooth}
+    body{font-family:Inter,system-ui,sans-serif;background:var(--bg);color:var(--cream);overflow-x:hidden;line-height:1.6}
+    body:before{content:"";position:fixed;inset:0;pointer-events:none;background:radial-gradient(circle at 20% 10%,rgba(200,163,91,.16),transparent 28%),radial-gradient(circle at 85% 25%,rgba(255,255,255,.08),transparent 25%),linear-gradient(135deg,#060606,#10100d 46%,#070707);z-index:-3}
+    body:after{content:"";position:fixed;inset:0;pointer-events:none;background-image:url('data:image/svg+xml,%3Csvg viewBox=%220 0 200 200%22 xmlns=%22http://www.w3.org/2000/svg%22%3E%3Cfilter id=%22n%22%3E%3CfeTurbulence type=%22fractalNoise%22 baseFrequency=%22.8%22 numOctaves=%223%22 stitchTiles=%22stitch%22/%3E%3C/filter%3E%3Crect width=%22100%25%22 height=%22100%25%22 filter=%22url(%23n)%22 opacity=%22.28%22/%3E%3C/svg%3E');opacity:.13;z-index:-2}
+    .rain{position:fixed;inset:0;pointer-events:none;z-index:-1;overflow:hidden;opacity:.55}
+    .drop{position:absolute;top:-18%;width:1px;height:88px;background:linear-gradient(180deg,transparent,rgba(255,255,255,.34),transparent);animation:rain linear infinite;filter:blur(.2px)}
+    @keyframes rain{to{transform:translate3d(-120px,120vh,0)}}
+    .container{width:min(1180px,calc(100% - 36px));margin:auto}
+    .nav{position:fixed;top:16px;left:0;right:0;z-index:30;transition:.35s ease}
+    .nav.hide{transform:translateY(-110px)}
+    .nav-inner{width:min(1180px,calc(100% - 28px));margin:auto;display:flex;align-items:center;justify-content:space-between;padding:13px 16px;border:1px solid var(--line);border-radius:999px;background:rgba(12,12,10,.68);backdrop-filter:blur(18px);box-shadow:0 18px 60px rgba(0,0,0,.32)}
+    .brand{display:flex;align-items:center;gap:12px;text-decoration:none;color:var(--cream);font-weight:800;letter-spacing:.02em}
+    .brand-mark{width:44px;height:44px;border-radius:16px;display:grid;place-items:center;background:linear-gradient(135deg,var(--gold),#fff1bd);color:#111;font-family:Playfair Display,serif;font-weight:700;box-shadow:0 0 28px rgba(200,163,91,.25)}
+    .links{display:flex;gap:6px;align-items:center}
+    .links a{color:var(--muted);text-decoration:none;padding:10px 14px;border-radius:999px;font-size:14px;font-weight:600;transition:.25s}
+    .links a:hover{color:var(--cream);background:rgba(255,255,255,.07)}
+    .nav-cta{background:linear-gradient(135deg,var(--gold),var(--gold2));color:#111!important;box-shadow:0 0 24px rgba(200,163,91,.24)}
+    .hero{min-height:100vh;display:grid;align-items:center;padding:130px 0 70px;position:relative}
+    .hero-grid{display:grid;grid-template-columns:1.08fr .92fr;gap:42px;align-items:center}
+    .eyebrow{display:inline-flex;align-items:center;gap:10px;padding:9px 14px;border:1px solid var(--line);border-radius:999px;color:var(--gold2);background:rgba(255,255,255,.045);font-size:13px;font-weight:700;letter-spacing:.18em;text-transform:uppercase}
+    .eyebrow:before{content:"";width:7px;height:7px;border-radius:50%;background:var(--gold2);box-shadow:0 0 18px var(--gold)}
+    h1{font-family:Playfair Display,serif;font-size:clamp(50px,7vw,102px);line-height:.92;letter-spacing:-.055em;margin:24px 0 22px;max-width:850px}
+    .hero p{font-size:clamp(17px,2vw,21px);color:var(--muted);max-width:650px}
+    .hero-actions{display:flex;flex-wrap:wrap;gap:14px;margin-top:34px}
+    .btn{display:inline-flex;align-items:center;justify-content:center;gap:10px;padding:15px 22px;border-radius:999px;text-decoration:none;font-weight:800;border:1px solid var(--line);transition:.28s cubic-bezier(.2,.8,.2,1);position:relative;overflow:hidden}
+    .btn-primary{background:linear-gradient(135deg,var(--gold),var(--gold2));color:#111;box-shadow:0 18px 50px rgba(200,163,91,.28)}
+    .btn-ghost{color:var(--cream);background:rgba(255,255,255,.055)}
+    .btn:hover{transform:translateY(-3px)}
+    .btn:after{content:"";position:absolute;inset:0;background:linear-gradient(100deg,transparent,rgba(255,255,255,.35),transparent);transform:translateX(-120%);transition:.55s}
+    .btn:hover:after{transform:translateX(120%)}
+    .hero-card{border:1px solid var(--line);border-radius:36px;padding:26px;background:linear-gradient(180deg,rgba(255,255,255,.08),rgba(255,255,255,.035));box-shadow:var(--shadow);position:relative;overflow:hidden;min-height:560px}
+    .hero-card:before{content:"";position:absolute;inset:-30%;background:radial-gradient(circle,rgba(200,163,91,.23),transparent 35%);animation:floatLight 9s ease-in-out infinite alternate}
+    @keyframes floatLight{from{transform:translate(-14%,8%)}to{transform:translate(16%,-12%)}}
+    .barber-visual{position:relative;height:100%;min-height:505px;border-radius:28px;overflow:hidden;background:linear-gradient(145deg,#171714,#090909);border:1px solid rgba(255,255,255,.08)}
+    .barber-visual:before{content:"";position:absolute;inset:0;background:linear-gradient(120deg,rgba(0,0,0,.25),transparent 45%,rgba(200,163,91,.14)),url('https://images.unsplash.com/photo-1622287162716-f311baa1a2b8?auto=format&fit=crop&w=1200&q=85');background-size:cover;background-position:center;filter:saturate(.82) contrast(1.08);transform:scale(1.04)}
+    .visual-glass{position:absolute;left:22px;right:22px;bottom:22px;padding:22px;border-radius:24px;background:rgba(8,8,7,.62);backdrop-filter:blur(16px);border:1px solid var(--line)}
+    .visual-glass strong{font-size:21px;display:block;margin-bottom:7px}.visual-glass span{color:var(--muted);font-size:14px}.rating{display:flex;gap:8px;margin-top:14px;color:var(--gold2);font-weight:800}
+    section{padding:96px 0;position:relative}.section-head{display:flex;justify-content:space-between;gap:24px;align-items:end;margin-bottom:34px}.section-kicker{color:var(--gold2);font-size:13px;font-weight:800;letter-spacing:.18em;text-transform:uppercase}.section-title{font-family:Playfair Display,serif;font-size:clamp(34px,5vw,62px);line-height:1;margin-top:10px;letter-spacing:-.035em}.section-desc{color:var(--muted);max-width:470px}
+    .trust{display:grid;grid-template-columns:repeat(4,1fr);gap:14px;margin-top:-35px;position:relative;z-index:5}.trust-card{padding:22px;border:1px solid var(--line);border-radius:24px;background:rgba(255,255,255,.055);backdrop-filter:blur(14px)}.trust-card b{font-size:26px;color:var(--gold2)}.trust-card p{color:var(--muted);font-size:14px;margin-top:5px}
+    .services{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}.service{padding:28px;border:1px solid var(--line);border-radius:var(--radius);background:linear-gradient(180deg,rgba(255,255,255,.075),rgba(255,255,255,.032));min-height:230px;transition:.3s;position:relative;overflow:hidden}.service:hover{transform:translateY(-8px);border-color:rgba(240,207,133,.35)}.service:before{content:"";position:absolute;right:-60px;top:-60px;width:150px;height:150px;border-radius:50%;background:rgba(200,163,91,.13);filter:blur(8px)}.service .num{color:var(--gold2);font-weight:900;font-size:13px;letter-spacing:.16em}.service h3{font-size:23px;margin:18px 0 10px}.service p{color:var(--muted)}
+    .experience{display:grid;grid-template-columns:1fr 1fr;gap:20px}.exp-card{padding:34px;border-radius:32px;border:1px solid var(--line);background:linear-gradient(135deg,rgba(255,255,255,.075),rgba(255,255,255,.035));box-shadow:var(--shadow)}.exp-card h3{font-size:27px;margin-bottom:10px}.exp-card p,.exp-list li{color:var(--muted)}.exp-list{list-style:none;margin-top:22px;display:grid;gap:12px}.exp-list li{display:flex;gap:10px}.exp-list li:before{content:"✓";color:var(--gold2);font-weight:900}
+    .hours-box{display:grid;gap:12px}.hour-row{display:flex;justify-content:space-between;gap:16px;padding:15px 0;border-bottom:1px solid var(--line);color:var(--muted)}.hour-row b{color:var(--cream)}
+    .faq{display:grid;gap:12px}.faq-item{border:1px solid var(--line);border-radius:22px;background:rgba(255,255,255,.045);overflow:hidden}.faq-q{width:100%;padding:21px 22px;text-align:left;background:none;border:0;color:var(--cream);font:inherit;font-weight:800;display:flex;justify-content:space-between;cursor:pointer}.faq-a{max-height:0;overflow:hidden;transition:.35s ease;color:var(--muted);padding:0 22px}.faq-item.active .faq-a{max-height:170px;padding:0 22px 20px}.faq-q span{color:var(--gold2)}
+    .contact-grid{display:grid;grid-template-columns:.9fr 1.1fr;gap:20px}.contact-card{padding:32px;border:1px solid var(--line);border-radius:32px;background:rgba(255,255,255,.055)}.contact-card h3{font-size:28px;margin-bottom:10px}.contact-card p{color:var(--muted);margin-bottom:22px}.contact-line{display:flex;justify-content:space-between;padding:16px 0;border-bottom:1px solid var(--line);color:var(--muted)}.contact-line b{color:var(--cream)}iframe{width:100%;min-height:460px;border:0;border-radius:32px;filter:grayscale(.22) contrast(1.05);box-shadow:var(--shadow)}
+    footer{padding:40px 0;border-top:1px solid var(--line);color:var(--muted)}.footer-inner{display:flex;justify-content:space-between;gap:20px;align-items:center}.credit a{color:var(--gold2);text-decoration:none;font-weight:800}
+    .float-actions{position:fixed;right:18px;bottom:18px;z-index:25;display:grid;gap:10px}.float-actions a{width:56px;height:56px;border-radius:50%;display:grid;place-items:center;text-decoration:none;background:rgba(18,18,15,.82);border:1px solid var(--line);backdrop-filter:blur(14px);box-shadow:0 16px 50px rgba(0,0,0,.32);transition:.25s}.float-actions a:hover{transform:translateY(-4px)}.float-actions svg{width:24px;height:24px;fill:var(--cream)}
+    .reveal{opacity:0;transform:translateY(26px);transition:.75s ease}.reveal.show{opacity:1;transform:none}
+
+    /* premium motion polish */
+    .nav-inner{animation:navFloat 6s ease-in-out infinite;position:relative;overflow:hidden}
+    .nav-inner:before{content:"";position:absolute;inset:0;background:linear-gradient(115deg,transparent,rgba(240,207,133,.12),transparent);transform:translateX(-120%);animation:navSheen 5.5s ease-in-out infinite;pointer-events:none}
+    @keyframes navFloat{0%,100%{box-shadow:0 18px 60px rgba(0,0,0,.32),0 0 0 rgba(200,163,91,0)}50%{box-shadow:0 22px 72px rgba(0,0,0,.42),0 0 34px rgba(200,163,91,.10)}}
+    @keyframes navSheen{0%,45%{transform:translateX(-130%)}70%,100%{transform:translateX(130%)}}
+    .brand-mark{width:44px;height:44px;border-radius:16px;position:relative;isolation:isolate;background:linear-gradient(145deg,rgba(240,207,133,.96),rgba(153,116,47,.72) 52%,rgba(255,255,255,.14));border:1px solid rgba(255,255,255,.28);overflow:hidden;color:transparent;animation:markPulse 3.2s ease-in-out infinite;box-shadow:0 0 28px rgba(200,163,91,.26),inset 0 0 18px rgba(255,255,255,.12)}
+    .brand-mark:before{content:"";position:absolute;left:9px;top:9px;width:9px;height:9px;border:2px solid #111;border-radius:50%;box-shadow:13px 13px 0 -2px transparent,13px 13px 0 0 #111}
+    .brand-mark i,.brand-mark b{position:absolute;display:block;background:#111;border-radius:20px;box-shadow:0 0 10px rgba(255,255,255,.16);transform-origin:left center}
+    .brand-mark i{width:24px;height:2px;transform:rotate(35deg);left:14px;top:20px}
+    .brand-mark b{width:24px;height:2px;transform:rotate(-35deg);left:14px;top:24px}
+    .brand-mark:after{content:"";position:absolute;right:8px;top:8px;width:10px;height:10px;border-radius:50%;background:rgba(17,17,17,.88);box-shadow:0 18px 0 rgba(17,17,17,.72)}
+    @keyframes markPulse{0%,100%{transform:translateY(0) rotate(0deg);filter:saturate(1)}50%{transform:translateY(-1px) rotate(4deg);filter:saturate(1.2)}}
+    .links a{position:relative;overflow:hidden}
+    .links a:before{content:"";position:absolute;left:14px;right:14px;bottom:7px;height:1px;background:linear-gradient(90deg,transparent,var(--gold2),transparent);transform:scaleX(0);transition:.28s ease;opacity:.75}
+    .links a:hover:before{transform:scaleX(1)}
+    .nav-cta{animation:ctaBreath 2.8s ease-in-out infinite}
+    @keyframes ctaBreath{0%,100%{filter:brightness(1);transform:translateY(0)}50%{filter:brightness(1.08);transform:translateY(-1px)}}
+    .trust-card,.service,.exp-card,.contact-card,.faq-item{position:relative;overflow:hidden;will-change:transform,box-shadow,border-color}
+    .trust-card:after,.service:after,.exp-card:after,.contact-card:after,.faq-item:after{content:"";position:absolute;inset:0;background:linear-gradient(120deg,transparent,rgba(255,255,255,.11),transparent);transform:translateX(-120%);transition:.7s ease;pointer-events:none}
+    .trust-card:hover:after,.service:hover:after,.exp-card:hover:after,.contact-card:hover:after,.faq-item:hover:after{transform:translateX(120%)}
+    .trust-card:hover,.exp-card:hover,.contact-card:hover,.faq-item:hover{transform:translateY(-6px);border-color:rgba(240,207,133,.32);box-shadow:0 24px 70px rgba(0,0,0,.36),0 0 35px rgba(200,163,91,.08)}
+    .service{box-shadow:0 0 0 rgba(0,0,0,0)}
+    .service:hover{box-shadow:0 28px 80px rgba(0,0,0,.38),0 0 42px rgba(200,163,91,.10)}
+    .btn{isolation:isolate}
+    .btn:before{content:"";position:absolute;inset:-2px;border-radius:inherit;background:linear-gradient(120deg,rgba(240,207,133,.0),rgba(240,207,133,.35),rgba(240,207,133,.0));opacity:0;filter:blur(10px);transition:.35s;z-index:-1}
+    .btn:hover:before{opacity:1}
+    .btn-primary{animation:buttonGlow 3.4s ease-in-out infinite}
+    @keyframes buttonGlow{0%,100%{box-shadow:0 18px 50px rgba(200,163,91,.25)}50%{box-shadow:0 22px 62px rgba(200,163,91,.38)}}
+    .faq-q span{transition:.28s ease}.faq-item.active .faq-q span{transform:rotate(45deg)}
+
+    @media(max-width:900px){.links a:not(.nav-cta){display:none}.hero-grid,.experience,.contact-grid{grid-template-columns:1fr}.hero{padding-top:112px}.hero-card{min-height:430px}.barber-visual{min-height:390px}.trust,.services{grid-template-columns:1fr 1fr}.section-head{display:block}.section-desc{margin-top:16px}.rain{opacity:.28}.drop{height:56px}.footer-inner{display:grid}.float-actions{right:12px;bottom:12px}}
+    @media(max-width:560px){.container{width:min(100% - 24px,1180px)}.nav-inner{width:calc(100% - 18px);padding:10px 11px}.brand span{font-size:13px}.brand-mark{width:35px;height:35px}.hero-actions{display:grid}.btn{width:100%}.trust,.services{grid-template-columns:1fr}section{padding:72px 0}.hero-card{padding:14px;border-radius:26px}.barber-visual{min-height:360px}.visual-glass{left:12px;right:12px;bottom:12px}.contact-line{display:grid}.float-actions a{width:52px;height:52px}}
+    @media(prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important;scroll-behavior:auto!important}.reveal{opacity:1;transform:none}}
+  </style>
+</head>
+<body>
+  <div class="rain" id="rain"></div>
+  <nav class="nav" id="nav">
+    <div class="nav-inner">
+      <a class="brand" href="#home"><span class="brand-mark" aria-hidden="true"><i></i><b></b></span><span>Kılıç Hair Studio</span></a>
+      <div class="links">
+        <a href="#home">Ana Sayfa</a>
+        <a href="#services">Hizmetler</a>
+        <a href="#faq">SSS</a>
+        <a href="#contact">İletişim</a>
+        <a class="nav-cta" href="https://www.google.com/maps/place//data=!4m2!3m1!1s0x14b55f98b868cd23:0x1ecdc4d93e90690a?sa=X&ved=1t:8290&hl=tr-TR&ictx=111" target="_blank" rel="noopener">Yol Tarifi</a>
+      </div>
+    </div>
+  </nav>
+
+  <main id="home" class="hero">
+    <div class="container hero-grid">
+      <div class="reveal">
+        <span class="eyebrow">modern erkek kuaförü</span>
+        <h1>net çizgi sakin lüks güçlü ilk izlenim</h1>
+        <p>Kılıç Hair Studio saç kesimi sakal düzeni ve kişisel bakımda net işçilik modern atmosfer ve premium karşılama sunar</p>
+        <div class="hero-actions">
+          <a class="btn btn-primary" href="https://www.google.com/maps/place//data=!4m2!3m1!1s0x14b55f98b868cd23:0x1ecdc4d93e90690a?sa=X&ved=1t:8290&hl=tr-TR&ictx=111" target="_blank" rel="noopener">Google Maps ile Yol Tarifi</a>
+          <a class="btn btn-ghost" href="#services">Hizmetleri İncele</a>
+        </div>
+      </div>
+      <div class="hero-card reveal">
+        <div class="barber-visual">
+          <div class="visual-glass">
+            <strong>Her gün 09:00 22:00 açık</strong>
+            <span>Randevunu planla konuma gel stilini yenile</span>
+            <div class="rating">★★★★★ <span style="color:var(--muted);font-weight:700">5,0 Google puanı</span></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <div class="container trust reveal">
+    <div class="trust-card"><b>5,0</b><p>Google değerlendirme puanı</p></div>
+    <div class="trust-card"><b>09 22</b><p>Her gün düzenli hizmet</p></div>
+    <div class="trust-card"><b>Modern</b><p>Temiz çizgili stil anlayışı</p></div>
+    <div class="trust-card"><b>Konum</b><p>Maps üzerinden kolay ulaşım</p></div>
+  </div>
+
+  <section id="services">
+    <div class="container">
+      <div class="section-head reveal">
+        <div><div class="section-kicker">hizmetler</div><h2 class="section-title">temiz çizgi modern bakım premium deneyim</h2></div>
+        <p class="section-desc">Klasik erkek kuaförü hizmetleri daha düzenli daha şık ve daha güven veren bir sunumla hazırlanır</p>
+      </div>
+      <div class="services">
+        <article class="service reveal"><div class="num">01</div><h3>Modern Saç Kesimi</h3><p>Yüz şekline ve günlük stile uygun temiz bitişli erkek saç kesimi</p></article>
+        <article class="service reveal"><div class="num">02</div><h3>Sakal Tasarımı</h3><p>Kontür belirleme ense ve yanak temizliğiyle daha net bir görünüm</p></article>
+        <article class="service reveal"><div class="num">03</div><h3>Saç Sakal Kombin</h3><p>Tek seansta düzenli ve bütünlüklü bakım isteyenler için pratik paket</p></article>
+        <article class="service reveal"><div class="num">04</div><h3>Fön ve Şekillendirme</h3><p>Özel gün günlük kullanım veya hızlı toparlama için doğal şekillendirme</p></article>
+        <article class="service reveal"><div class="num">05</div><h3>Ense Temizliği</h3><p>Kısa sürede daha bakımlı görünüm sağlayan detaylı çevre temizliği</p></article>
+        <article class="service reveal"><div class="num">06</div><h3>Bakım Danışmanlığı</h3><p>Saç yapına uygun ürün ve kullanım önerileriyle stili koruma desteği</p></article>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <div class="container experience">
+      <div class="exp-card reveal">
+        <div class="section-kicker">deneyim</div>
+        <h3>sade görünür ama etkisi güçlü olur</h3>
+        <p>Kılıç Hair Studio kalabalık ve karmaşık bir anlatım yerine net kesim temiz sakal düzeni ve modern bakım hissini öne çıkarır</p>
+        <ul class="exp-list">
+          <li>Modern ve sade kesim anlayışı</li>
+          <li>Temiz kontür ve detay odaklı sakal düzeni</li>
+          <li>Her gün geniş çalışma saati</li>
+          <li>Google Maps üzerinden kolay konum erişimi</li>
+        </ul>
+      </div>
+      <div class="exp-card reveal">
+        <div class="section-kicker">çalışma saatleri</div>
+        <h3>her gün aynı net saat aralığı</h3>
+        <div class="hours-box">
+          <div class="hour-row"><b>Pazartesi</b><span>09:00 22:00</span></div>
+          <div class="hour-row"><b>Salı</b><span>09:00 22:00</span></div>
+          <div class="hour-row"><b>Çarşamba</b><span>09:00 22:00</span></div>
+          <div class="hour-row"><b>Perşembe</b><span>09:00 22:00</span></div>
+          <div class="hour-row"><b>Cuma</b><span>09:00 22:00</span></div>
+          <div class="hour-row"><b>Cumartesi</b><span>09:00 22:00</span></div>
+          <div class="hour-row"><b>Pazar</b><span>09:00 22:00</span></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="faq">
+    <div class="container">
+      <div class="section-head reveal">
+        <div><div class="section-kicker">sss</div><h2 class="section-title">gelmeden önce bilmen iyi olur</h2></div>
+        <p class="section-desc">Randevu konum saat ve hizmetlerle ilgili en sık sorulan konular</p>
+      </div>
+      <div class="faq">
+        <div class="faq-item reveal active"><button class="faq-q">Çalışma saatleri nedir <span>+</span></button><div class="faq-a">Kılıç Hair Studio her gün 09:00 22:00 saatleri arasında hizmet verir</div></div>
+        <div class="faq-item reveal"><button class="faq-q">Google Maps ile nasıl giderim <span>+</span></button><div class="faq-a">Sitedeki yol tarifi butonuna dokunarak doğrudan Google Maps konumuna geçebilirsin</div></div>
+        <div class="faq-item reveal"><button class="faq-q">Hangi hizmetler var <span>+</span></button><div class="faq-a">Modern saç kesimi sakal tasarımı saç sakal kombin ense temizliği fön ve bakım danışmanlığı gibi klasik erkek kuaförü hizmetleri bulunur</div></div>
+        <div class="faq-item reveal"><button class="faq-q">Galeri neden yok <span>+</span></button><div class="faq-a">Bu versiyonda galeri alanı bilinçli olarak eklenmedi görseller hazır olduğunda site yapısına premium bir galeri bölümü sonradan eklenebilir</div></div>
+      </div>
+    </div>
+  </section>
+
+  <section id="contact">
+    <div class="container">
+      <div class="section-head reveal">
+        <div><div class="section-kicker">iletişim</div><h2 class="section-title">konuma geç bakımını planla</h2></div>
+        <p class="section-desc">Kılıç Hair Studio konumuna ulaşmak için Google Maps yönlendirmesini kullanabilirsin</p>
+      </div>
+      <div class="contact-grid">
+        <div class="contact-card reveal">
+          <h3>Kılıç Hair Studio</h3>
+          <p>Modern erkek kuaförü deneyimi için yol tarifi al hizmetleri incele ve çalışma saatine göre gel</p>
+          <div class="contact-line"><b>Google Puanı</b><span>5,0</span></div>
+          <div class="contact-line"><b>Çalışma Saati</b><span>09:00 22:00</span></div>
+          <div class="contact-line"><b>Hizmet Türü</b><span>Erkek Kuaförü</span></div>
+          <div style="margin-top:24px;display:grid;gap:12px">
+            <a class="btn btn-primary" href="https://www.google.com/maps/place//data=!4m2!3m1!1s0x14b55f98b868cd23:0x1ecdc4d93e90690a?sa=X&ved=1t:8290&hl=tr-TR&ictx=111" target="_blank" rel="noopener">Konumu Aç</a>
+            <a class="btn btn-ghost" href="#services">Hizmetlere Dön</a>
+          </div>
+        </div>
+        <div class="reveal">
+          <iframe loading="lazy" allowfullscreen referrerpolicy="no-referrer-when-downgrade" src="https://www.google.com/maps?q=K%C4%B1l%C4%B1%C3%A7%20Hair%20Studio%20erkek%20kuaf%C3%B6r%C3%BC&output=embed"></iframe>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <div class="container footer-inner">
+      <div>© Kılıç Hair Studio modern erkek kuaförü</div>
+      <div class="credit">web tasarım için <a href="https://wa.me/905317940740?text=Merhaba%20web%20site%20hizmeti%20hakk%C4%B1nda%20bilgi%20almak%20istiyorum" target="_blank" rel="noopener">0531 794 07 40</a></div>
+    </div>
+  </footer>
+
+  <div class="float-actions">
+    <a href="https://www.google.com/maps/place//data=!4m2!3m1!1s0x14b55f98b868cd23:0x1ecdc4d93e90690a?sa=X&ved=1t:8290&hl=tr-TR&ictx=111" target="_blank" rel="noopener" aria-label="Yol tarifi">
+      <svg viewBox="0 0 24 24"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5A2.5 2.5 0 1 1 12 6a2.5 2.5 0 0 1 0 5.5z"/></svg>
+    </a>
+  </div>
+
+  <script>
+    const rain=document.getElementById('rain');
+    const count=window.innerWidth<700?38:86;
+    for(let i=0;i<count;i++){
+      const d=document.createElement('span');d.className='drop';
+      d.style.left=Math.random()*110+'%';d.style.animationDuration=(.75+Math.random()*1.15)+'s';d.style.animationDelay=(-Math.random()*2)+'s';d.style.opacity=.18+Math.random()*.55;rain.appendChild(d)
+    }
+    const nav=document.getElementById('nav');let last=0;
+    addEventListener('scroll',()=>{const y=scrollY;nav.classList.toggle('hide',y>last&&y>180);last=y});
+    const obs=new IntersectionObserver((entries)=>{entries.forEach(e=>{if(e.isIntersecting)e.target.classList.add('show')})},{threshold:.14});
+    document.querySelectorAll('.reveal').forEach(el=>obs.observe(el));
+    document.querySelectorAll('.faq-q').forEach(btn=>btn.addEventListener('click',()=>{const item=btn.parentElement;document.querySelectorAll('.faq-item').forEach(i=>{if(i!==item)i.classList.remove('active')});item.classList.toggle('active')}));
+    document.querySelectorAll('.hero-card').forEach(card=>{card.addEventListener('mousemove',e=>{if(innerWidth<900)return;const r=card.getBoundingClientRect();const x=(e.clientX-r.left)/r.width-.5;const y=(e.clientY-r.top)/r.height-.5;card.style.transform=`perspective(900px) rotateY(${x*5}deg) rotateX(${-y*5}deg)`});card.addEventListener('mouseleave',()=>card.style.transform='')});
+  </script>
+</body>
+</html>
